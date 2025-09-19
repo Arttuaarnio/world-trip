@@ -38,7 +38,7 @@ export default function HomePage() {
         countryCode: countryData.cca2,
       } as any;
 
-      // search currency rate
+      // search currency rate to EUR if available
       if (country.currency !== "EUR" && country.currency !== "N/A") {
         try {
           const rateData = await fetchCurrencyRate(country.currency);
